@@ -9,7 +9,6 @@ libraryDependencies ++= {
     Nil
 }
 
-
 libraryDependencies += "org.specs2" %% "specs2-core" % "3.10.0" % Test
 
 libraryDependencies += Defaults.sbtPluginExtra(
@@ -18,7 +17,7 @@ libraryDependencies += Defaults.sbtPluginExtra(
   (scalaBinaryVersion in update).value
 )
 
-crossSbtVersions := Seq("1.2.7", "0.13.18")
+crossSbtVersions := Seq("1.2.8", "0.13.18")
 
 scalacOptions ++= Seq(
   "-deprecation",
