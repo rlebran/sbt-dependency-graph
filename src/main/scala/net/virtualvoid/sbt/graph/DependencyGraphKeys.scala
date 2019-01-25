@@ -103,6 +103,16 @@ trait DependencyGraphKeys {
     "dependency-license-info",
     "Aggregates and shows information about the licenses of dependencies")
 
+  val licenseInfoCsvString = TaskKey[String](
+    "dependency-license-info-csv-string",
+    "string blablabla")
+  val licenseInfoCsvFile = SettingKey[File](
+    "dependency-license-info-csv-file",
+    "The location the license info csv file should be generated at")
+  val licenseInfoCsv = TaskKey[Unit](
+    "dependency-license-info-csv",
+    "Aggregates and shows information about the licenses of dependencies")
+
   // internal
   private[graph] val ignoreMissingUpdate = TaskKey[UpdateReport]("dependencyUpdate", "sbt-dependency-graph version of update")
   private[graph] val moduleGraphStore = TaskKey[ModuleGraph]("module-graph-store", "The stored module-graph from the last run")
