@@ -127,6 +127,7 @@ object DependencyGraphSettings {
       licenseInfoCsvString := rendering.LicenseInfoCsv.render(moduleGraph.value),
       licenseInfoCsvFile := { target.value / "dependencies-license-%s.csv".format(config.toString) },
       licenseInfoCsv := { writeToFile(licenseInfoCsvString, licenseInfoCsvFile).value },
+
       // deprecated settings
       asciiTree := (asString in dependencyTree).value) ++
       renderingAlternatives.flatMap((renderingTaskSettings _).tupled) ++
